@@ -7,12 +7,14 @@ import (
 
 func DefaultFoo() a.Foo {
 	foo := b.DefaultFoo()
-	foo.Data += 1
+	foo.Data += 5
+	foo.OtherData = "multiversion-main"
 	return foo
 }
 
 func NewFoo(data int) a.Foo {
 	foo := b.NewFoo(data)
-	foo.Data += 1
+	foo.Data += 5
+	foo.OtherData = "multiversion-main"
 	return foo
 }

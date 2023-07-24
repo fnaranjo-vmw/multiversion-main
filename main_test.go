@@ -7,14 +7,20 @@ import (
 
 func TestDefaultFoo(t *testing.T) {
 	foo := api.DefaultFoo()
-	if foo.Data != 972 {
+	if foo.Data != 997 {
+		t.Fail()
+	}
+	if foo.OtherData != "multiversion-main" {
 		t.Fail()
 	}
 }
 
 func TestNewFoo(t *testing.T) {
 	foo := api.NewFoo(987)
-	if foo.Data != 988 {
+	if foo.Data != 992 {
+		t.Fail()
+	}
+	if foo.OtherData != "multiversion-main" {
 		t.Fail()
 	}
 }
